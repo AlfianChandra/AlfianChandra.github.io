@@ -1,0 +1,114 @@
+<nav class="navbar navbar-inverse navbar-fixed-top rev">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand rev" href=""><img src='asset/media/fav.png' alt='brand' style='width:35px;margin-top:8px;'></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right rev">
+        <li><a href="javascript:void(0)"  class='nav-btn page-switch' target-to="home.html" style='color:#fff;'><span class="glyphicon glyphicon-home"></span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="sidebar-control sidebar-right" id="sidebar-1" style="background-color: rgb(51, 87, 140);">
+  <button type="button" class="sidebar-control-close sidebar-close" style="display: none;">✗</button>
+  <div class="sidebar-body" style="padding-top: 30px; display: none;">
+	<div class="col-md-12">
+	<h4 style="color:#fff">Bar Kanan</h4>
+	</div>
+  </div>
+</div>
+
+<div class="sidebar-control sidebar-left" id="sidebar-2" style="background-color: rgb(153, 87, 140);">
+  <button type="button" class="sidebar-control-close sidebar-close" style="display: none;">✗</button>
+  <div class="sidebar-body" style="display: none;">
+	<div class="col-md-12">
+	<h4 style="color:#fff">Bar Kiri</h4>
+	</div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:100px;padding-bottom:100px;">
+<h1>Simple Responsive Sidebar</h1>
+<a href="https://github.com/AlfianChandra/Simple-Sidebar/archive/master.zip" class="btn btn-primary"><span class="fa fa-download"></span> Download Plugin</a>
+<a href="https://github.com/AlfianChandra/Simple-Sidebar" target="_blank" class="btn btn-primary"><span class="fa fa-github-square"></span> Kunjungi Repo</a>
+<h3>Demo</h3>
+<button type="button" class="btn btn-default sidebar-trigger" sidebar-target="#sidebar-1" sidebar-color="#33578c">Bar Kanan</button>
+<button type="button" class="btn btn-default sidebar-trigger" sidebar-target="#sidebar-2" sidebar-color="#99578c">Bar Kiri</button>
+<h1>PENGGUNAAN</h1>
+<h3>Instalasi</h3>
+<p></p>· Masukkan Stylesheet "sidebar.css". Terletak pada folder "sidebar/css/"<p></p>
+<textarea readonly style="border:none;resize:none" class="form-control">&lt;link rel='stylesheet' href='sidebar/css/sidebar.css'/&gt;</textarea>
+<br><a href="asset/sidebar/css/sidebar.css" class="btn btn-primary btn-sm">Kode Sumber</a>
+
+<br><br><br>
+<p></p>· Masukkan JQuery v2.2.4<p></p>
+<textarea readonly style="border:none;resize:none" class="form-control">&lt;script src="https://code.jquery.com/jquery-2.2.4.js"&gt;&lt;/script&gt;</textarea>
+<br>
+<a href="https://code.jquery.com/jquery-2.2.4.js" class="btn btn-primary btn-sm">Kode Sumber</a>
+
+<br><br><br>
+<p></p>· Masukkan file JavaScript "sidebar.js". Terletak pada folder "sidebar/js/"<p></p>
+<textarea readonly style="border:none;resize:none" class="form-control">&lt;script src="js/sidebar.js"&gt;&lt;/script&gt;</textarea>
+<br>
+<a href="asset/sidebar/js/sidebar.js" class="btn btn-primary btn-sm">Kode Sumber</a>
+<br><br>
+<h3>Pembuatan</h3>
+<p></p>· Buat tombol<p></p>
+<textarea readonly style="border:none;resize:none" class="form-control">	
+&lt;button type='button' class='sidebar-trigger' sidebar-target="#sidebar-1" sidebar-color="#33578c"&gt;Buka Sidebar&lt;/button&gt;
+</textarea>
+
+<br><p>
+Terdapat 2 atribut milik SimpleSidebar yang harus dideklarasikan dan diberi nilainya, yaitu:
+<code>sidebar-target</code> dan <code>sidebar-color</code>
+<br>Kedua atribut ini memiliki fungsi yang berbeda.
+<br><br>
+<code>sidebar-target</code><br>
+Atribut ini berfungsi sebagai penghubung antar Tombol dan Sidebar. Nilai yang diisi adalah target elemen yang akan dijadikan Sidebar.
+<br><br>
+<code>sidebar-color</code><br>
+Atribut ini mengatur warna latar belakang Sidebar. Nilai yang diberikan berupa kode angka RGB, RGBA, HEX, Color String (Red, Green, dan lainnya).
+</p>
+<br>
+Tambahkan Kelas <code>.sidebar-trigger</code> ke tombol. Kelas ini membaca nilai atribut Sidebar diatas.
+<br><br>
+<p></p>· Buat Sidebar-nya<p></p>
+<textarea readonly style="border:none;resize:none" rows="8" class="form-control">	
+&lt;div class="sidebar-control sidebar-left" id="sidebar-1"&gt;
+  &lt;button type="button" class="sidebar-close"&gt;✗&lt;/button&gt;
+  &lt;div class="sidebar-body"&gt;
+	&lt;h4 style='color:#fff'&gt;LOREM IPSUM DOLOR SIT AMET&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</textarea>
+<br><p>
+  Untuk dapat membuat Sidebar, hanya perlu menambahkan Kelas <code>sidebar-control</code> ke elemen yang akan dijadikan Sidebar. Contoh: <code>div</code>.<br>
+Atur posisi Sidebar ke Kanan atau Kiri dengan menambahkan salah satu Kelas berikut <code>sidebar-left</code> atau <code>sidebar-right</code>.<br>
+Buat <code>ID</code> pada elemen Sidebar, pastikan <code>ID</code> pada Sidebar dan nilai dari <code>sidebar-target</code> sama agar tombol
+dapat mendeteksi elemen Sidebar.
+</p>
+</div>
+<div class='footer'>
+  <div style='text-align:center;padding-top:20px' class='col-md-12'>
+    <a class='social' target='_blank' href='https://www.facebook.com/alfian.gokiel123'><span class='fa fa-facebook-square fa-2x'></span></a>
+    <a class='social' target='_blank' href='https://github.com/AlfianChandra'><span class='fa fa-github-square fa-2x'></span></a>
+    <a class='social' target='_blank' href='https://www.instagram.com/alfian_chn97/'><span class='fa fa-instagram fa-2x'></span></a>
+  </div>
+  <address>&COPY; by Alfian Chandra</address>
+</div>
+
+<script src="asset/jquery/jquery.js"></script>
+<script src="asset/bootstrap/js/bootstrap.min.js"></script>
+<script src='asset/parallax/parallax.min.js'></script>
+<script src="asset/scrollreveal/scrollreveal.min.js"></script>
+<script src='asset/sidebar/js/sidebar.js'></script>
+<script src='asset/script.js'></script>
