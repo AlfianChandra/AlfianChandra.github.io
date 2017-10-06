@@ -26,7 +26,7 @@ $(document).ready(function(){
             
             clearInterval(inter);
           }
-        },500);
+        },200);
       }
     });
   }
