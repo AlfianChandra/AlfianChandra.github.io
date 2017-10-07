@@ -26,6 +26,7 @@ $(document).ready(function(){
           {
             $(".preloader").fadeOut(2000);
             $(".page").html(res);
+            location = "#top"
             clearInterval(inter);
           }
         },200);
