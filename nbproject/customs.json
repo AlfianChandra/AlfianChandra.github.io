@@ -1,0 +1,11 @@
+{
+  "elements": {},
+  "attributes": {
+    "sidebar-target": {
+      "context": "a"
+    },
+    "target-to": {
+      "context": "a"
+    }
+  }
+}
