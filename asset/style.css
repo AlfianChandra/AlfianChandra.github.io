@@ -240,3 +240,16 @@ address
   color:#fff;
   border:none;
 }
+
+.preloader
+{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image:url("media/loader.gif");
+  background-size:60px;
+  background-position:center;
+  background-repeat:no-repeat;
+}
