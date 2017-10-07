@@ -8,6 +8,7 @@ $(document).ready(function(){
   
   function switchPage(url)
   {
+    $(".preloader").fadeIn(500);
     $(".page").fadeOut(1000);
     $.ajax({
       url:url,
@@ -21,9 +22,9 @@ $(document).ready(function(){
           t--;
           if(t === 0)
           {
+            $(".preloader").fadeOut(1000);
             $(".page").fadeIn(1000);
             $(".page").html(res);
-            
             clearInterval(inter);
           }
         },200);
