@@ -35,7 +35,7 @@ $(document).ready(function(){
   }
   
   $(window).load(function(){
-    switchPage("home.html");
+    switchPage("demo-sidebar.html");
   });
   
   $(".page-switch").click(function(){
