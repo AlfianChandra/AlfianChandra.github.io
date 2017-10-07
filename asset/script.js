@@ -8,7 +8,6 @@ $(document).ready(function(){
   
   function switchPage(url)
   {
-    $(".page").fadeOut(1000);
     $.ajax({
       url:url,
       type:"get",
@@ -16,18 +15,17 @@ $(document).ready(function(){
       async:true,
       beforeSend:function()
       {
-        $(".preloader").fadeIn(500);
+        $(".preloader").fadeIn(1000);
       },
       success:function(res)
       {
-        $(".preloader").fadeOut(1000);
+        $(".page").html(res);
         var t = 2;
         var inter = setInterval(function(){
           t--;
           if(t === 0)
           {
-            $(".page").fadeIn(1000);
-            $(".page").html(res);
+            $(".preloader").fadeOut(1000);
             clearInterval(inter);
           }
         },200);
