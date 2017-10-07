@@ -15,17 +15,17 @@ $(document).ready(function(){
       async:true,
       beforeSend:function()
       {
-        $(".preloader").fadeIn(1000);
+        $(".preloader").fadeIn(400);
       },
       success:function(res)
       {
-        $(".page").html(res);
         var t = 2;
         var inter = setInterval(function(){
           t--;
           if(t === 0)
           {
-            $(".preloader").fadeOut(1000);
+            $(".preloader").fadeOut(400);
+            $(".page").html(res);
             clearInterval(inter);
           }
         },200);
