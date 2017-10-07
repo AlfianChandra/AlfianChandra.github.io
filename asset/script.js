@@ -24,7 +24,7 @@ $(document).ready(function(){
           t--;
           if(t === 0)
           {
-            $(".preloader").fadeOut(400);
+            $(".preloader").fadeOut(2000);
             $(".page").html(res);
             clearInterval(inter);
           }
