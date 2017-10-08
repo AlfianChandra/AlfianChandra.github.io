@@ -1,11 +1,11 @@
-$(document).ready(function(){
+$(document).ready(function(){  
   var sr = ScrollReveal();
   sr.reveal(".rev",{
     origin:"top",
     duration:2000,
     scale:0.5
   });
-  
+    
   function switchPage(url)
   {
     $.ajax({
@@ -15,21 +15,26 @@ $(document).ready(function(){
       async:true,
       beforeSend:function()
       {
-        $(".preloader").fadeIn(400);
+        $(".preloader").slideDown(1000);
       },
       success:function(res)
       {
-        var t = 2;
+        $(".page").html("");
+        var t = 5;
         var inter = setInterval(function(){
           t--;
+          if(t === 2)
+          {
+            $(".page").html(res);
+          }
           if(t === 0)
           {
-            $(".preloader").fadeOut(2000);
+            $(".preloader").slideUp(1000);
             $(".page").html(res);
-            location = "#top"
+            location = "#top";
             clearInterval(inter);
           }
-        },200);
+        },1000);
       }
     });
   }
@@ -43,4 +48,3 @@ $(document).ready(function(){
     switchPage(page);
   });
 });
-

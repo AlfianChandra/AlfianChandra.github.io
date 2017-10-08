@@ -1,0 +1,120 @@
+<div class="sidebar-control sidebar-right" id="sidebar-stack">
+  <button type="button" class="sidebar-close">✗</button>
+  <div class="sidebar-body">
+    <div class='col-md-12'>
+      <h4 class='project'><span class='fa fa-stack-overflow'></span> PROJECT</h4>
+      <a href="javascript:void(0)" class="side-menu page-switch" target-to="demo-sidebar.html">Simple Sidebar</a>
+      <a href="javascript:void(0)" class="side-menu page-switch" target-to="demo-city.html">Indonesian Cities Selector</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href=""><img src='asset/media/fav.png' alt='brand' style='width:35px;margin-top:8px;'></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:void(0)"  class='nav-btn page-switch' target-to="home.html" style='color:#fff;'><span class="glyphicon glyphicon-home"></span></a></li>
+        <li><a href="javascript:void(0)" class='nav-btn sidebar-trigger' sidebar-target="#sidebar-stack" sidebar-color="rgb(0,0,0)" style='color:#fff;'><span class="fa fa-stack-overflow"></span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container" style="padding-top:100px;padding-bottom:100px;">
+<div class="col-md-8">
+<h1>Indonesian Cities Selector</h1>
+<a href="https://github.com/AlfianChandra/City-Selector/archive/master.zip" target="_blank" class="btn btn-primary"><span class="fa fa-download"></span> Download Plugin</a>
+<a href="https://github.com/AlfianChandra/City-Selector" target="_blank" class="btn btn-primary"><span class="fa fa-github-square"></span> Kunjungi Repo</a>
+<h3>Demo</h3>
+<div class="form-group">
+  <label>Provinsi</label>
+  <select class="form-control city-init" city-target="#kab">
+
+  </select>
+</div>
+
+<div class="form-group">
+  <label>Kabupaten/Kota</label>
+  <select class="form-control" id="kab"></select>
+</div>
+
+<h1>Penggunaan</h1>
+<h3>Instalasi</h3>
+<p></p>· Masukkan JQuery v2.2.4<p></p>
+<textarea readonly style="border:none;resize:none" class="form-control">&lt;script src="https://code.jquery.com/jquery-2.2.4.js"&gt;&lt;/script&gt;</textarea>
+
+<br>
+<p></p>· Masukkan file JavaScript City Selector<p></p>
+<textarea readonly style="border:none;resize:none" class="form-control"><script src='city/js/city-control.js'></script></textarea>
+<br>
+<h5 class="alert alert-warning">&NestedGreaterGreater;. Pastikan Folder "city" tidak berada dalam folder lain.
+Disarankan agar folder "city" ditempatkan pada folder utama.</h5>
+<div class="col-md-6"><img src="asset/media/true.png"></div>
+<div class="col-md-12"></div>
+<div class="col-md-6"><img src="asset/media/false.png"></div>
+<br>
+<h3>Pembuatan</h3>
+<p></p>· Buat 2 Elemen <code>Select</code><p></p>
+<textarea readonly style="border:none;resize:none" class="form-control"><!-- Provinsi --> <select class="city-init" city-target="#kab"></select>
+<!-- Kabupaten/Kota --> <select id="targetkabupaten"></select>
+</textarea>
+<br><p>
+Element <code>Select</code> yang pertama akan menampilkan list Provinsi.<br>
+Sedangkan Elemen <code>Select</code> kedua akan menampilkan list Kabupaten/Kota.
+<br><br>
+Agar City Selector dapat berfungsi, berikan Class <code>city-init</code> pada Elemen <code>Select</code> Provinsi.
+<blockquote>
+  <code>&lt;select class="city-init"&gt;&lt;/select&gt;</code>
+</blockquote>
+Berikan atribut <code>city-target</code> dan berikan nilai dari ID Elemen <code>Select</code> Kabupaten/Kota.
+<blockquote>
+  <code>&lt;!-- Provinsi --&gt; &lt;select class="city-init" city-target='#targetkabupaten'&gt;&lt;/select&gt;</code>
+  <code>&lt;!-- Kabupaten/Kota --&gt; &lt;select id="targetkabupaten"&gt;&lt;/select&gt;</code>
+</blockquote>
+
+</div>
+  
+<div class="col-md-4">
+<h1>Changelogs</h1>
+<h4>08/10/2017 - 16.49 WIB</h4>
+<ul>
+  <li>More Cities</li>
+  <li>Algorithm changes</li>
+  <li>Classes</li>
+  <li>Built Docs & Demo</li>
+</ul>
+
+<h1>Coming Soon</h1>
+<ul>
+  <li>Completing Cities</li>
+  <li>Kecamatan Integration</li>
+</ul>
+</div>
+</div>
+<div class='footer'>
+  <div style='text-align:center;padding-top:20px' class='col-md-12'>
+    <a class='social' target='_blank' href='https://www.facebook.com/alfian.gokiel123'><span class='fa fa-facebook-square fa-2x'></span></a>
+    <a class='social' target='_blank' href='https://github.com/AlfianChandra'><span class='fa fa-github-square fa-2x'></span></a>
+    <a class='social' target='_blank' href='https://www.instagram.com/alfian_chn97/'><span class='fa fa-instagram fa-2x'></span></a>
+  </div>
+  <address>&COPY; by Alfian Chandra</address>
+</div>
+<script src="asset/jquery/jquery.js"></script>
+<script src="asset/bootstrap/js/bootstrap.min.js"></script>
+<script src='asset/parallax/parallax.min.js'></script>
+<script src="asset/scrollreveal/scrollreveal.min.js"></script>
+<script src='asset/sidebar/js/sidebar.js'></script>
+<script src='asset/script.js'></script>
+<script src="city/js/city-control.js"></script>
