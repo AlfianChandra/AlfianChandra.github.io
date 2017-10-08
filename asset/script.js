@@ -20,7 +20,7 @@ $(document).ready(function(){
       success:function(res)
       {
         $(".page").html("");
-        var t = 5;
+        var t = 3;
         var inter = setInterval(function(){
           t--;
           if(t === 2)
