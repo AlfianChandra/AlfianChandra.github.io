@@ -43,7 +43,7 @@ city = new City;
 initCities();
 function initCities()
 {
-  city.loadcity("asset/kota.html",$('.city-init'));
+  city.loadcity("city/asset/kota.html",$('.city-init'));
 }
 
 $('.city-init').change(function(){
@@ -58,5 +58,5 @@ $('.city-init').change(function(){
   //Create new attribute and set using value
   $(this).attr("city-url",value);
   //Loads cities//
-  city.loadto("asset/kab/"+tar+".html",target);
+  city.loadto("city/asset/kab/"+tar+".html",target);
 });
