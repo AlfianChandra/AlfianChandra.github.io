@@ -51,6 +51,10 @@
                 border:none;
                 background-color:rgb(0,150,255);
                 color:#fff;
+                width:70px;
+                font-size:25px;
+                height:70px;
+                border-radius:100px;
             }
             
             input
@@ -58,7 +62,7 @@
                 text-transform:uppercase;
                 padding:15px;
                 border:1px solid #ddd;
-                display:block;
+                display:inline-block;
                 margin-bottom:5px;
             }
         </style>
@@ -66,37 +70,38 @@
     <body>
         <div class="col-md-12">
             <h2>Twibbon Maker by Alfian Chandra</h2>
+            <h4>Twibbon: <b>Hari Lahir PMII</b></h4>
         </div>
         <div class="col-md-12">
             <div class="form-group">
-                <label>Pilih Gambar & Klik tombol "Muat Gambar"</label>
+                <label>Pilih Gambar & Klik tombol "<i class="fa fa-upload"></i>"</label>
                 <input type="file" id="inp">
-                <button style="margin-top:10px;" type="button" class="load"><span class="fa fa-upload"></span> Muat Gambar</button>
+                <button style="margin-top:5px;" type="button" class="load"><span class="fa fa-upload"></span></button>
             </div>
             <div class="form-group">
-                <label>Nama & Rayon</label>
+                <h5><b>Nama & Rayon</b></h5>
                 <input type="text" name="name" class="nama" placeholder="Ketik nama...">
                 <input type="text" name="name" class="rayon" placeholder="Ketik rayon">
             </div>
             <div class="form-group">
                 <h5><b>Atur Gambar</b></h5>
-                <button type="button" class="turun"><span class="fa fa-chevron-circle-down"></span> Turun</button>
-                <button type="button" class="naik"><span class="fa fa-chevron-circle-up"></span> Naik</button>
+                <button type="button" class="turun"><span class="fa fa-chevron-circle-down"></span></button>
+                <button type="button" class="naik"><span class="fa fa-chevron-circle-up"></span></button>
                 
-                <button type="button" class="kiri"><span class="fa fa-chevron-circle-left"></span> Kiri</button>
-                <button type="button" class="kanan"><span class="fa fa-chevron-circle-right"></span> Kanan</button>
-                <button type="button" class="smalize"><span class="fa fa-search-minus"></span> Kecilkan</button>
-                <button type="button" class="bigger"><span class="fa fa-search-plus"></span> Besarkan</button>
-                <button type="button" class="simpan"><span class="fa fa-save"></span> Simpan</button>
+                <button type="button" class="kiri"><span class="fa fa-chevron-circle-left"></span></button>
+                <button type="button" class="kanan"><span class="fa fa-chevron-circle-right"></span></button>
+                <button type="button" class="smalize"><span class="fa fa-search-minus"></span></button>
+                <button type="button" class="bigger"><span class="fa fa-search-plus"></span></button>
+                <button type="button" class="simpan" style="background-color:orange;"><span class="fa fa-save"></span></button>
             </div>
         </div>
         <div class="col-md-12">
-            <h4>Hasil:</h4>
+            <h4><b>Hasil:</b></h4>
             <div class="twibbon-result" style="z-index:99999;position:relative;">
-                <canvas id="mycanvas" width="700" height="700"></canvas>
+                <canvas id="mycanvas" width="700" height="700" style="border:3px dashed #aaa;"></canvas>
             </div>
             
-            <h4>Contoh</h4>
+            <h4><b>Contoh</b></h4>
             <div class="twibbon-wrapper">
                 
                 <img src="" class="user" id="user" style="resize:both">
