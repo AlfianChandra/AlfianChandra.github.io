@@ -56,6 +56,10 @@
             input
             {
                 text-transform:uppercase;
+                padding:15px;
+                border:1px solid #ddd;
+                display:block;
+                margin-bottom:5px;
             }
         </style>
     </head>
@@ -65,13 +69,17 @@
         </div>
         <div class="col-md-12">
             <div class="form-group">
-                <input type="file" id="inp"> <button style="margin-top:10px;" type="button" class="load"><span class="fa fa-upload"></span> Muat Gambar</button>
+                <label>Pilih Gambar & Klik tombol "Muat Gambar"</label>
+                <input type="file" id="inp">
+                <button style="margin-top:10px;" type="button" class="load"><span class="fa fa-upload"></span> Muat Gambar</button>
             </div>
             <div class="form-group">
+                <label>Nama & Rayon</label>
                 <input type="text" name="name" class="nama" placeholder="Ketik nama...">
                 <input type="text" name="name" class="rayon" placeholder="Ketik rayon">
             </div>
             <div class="form-group">
+                <h5><b>Atur Gambar</b></h5>
                 <button type="button" class="turun"><span class="fa fa-chevron-circle-down"></span> Turun</button>
                 <button type="button" class="naik"><span class="fa fa-chevron-circle-up"></span> Naik</button>
                 
