@@ -52,6 +52,11 @@
                 background-color:rgb(0,150,255);
                 color:#fff;
             }
+            
+            input
+            {
+                text-transform:uppercase;
+            }
         </style>
     </head>
     <body>
@@ -61,6 +66,10 @@
         <div class="col-md-12">
             <div class="form-group">
                 <input type="file" id="inp"> <button style="margin-top:10px;" type="button" class="load"><span class="fa fa-upload"></span> Muat Gambar</button>
+            </div>
+            <div class="form-group">
+                <input type="text" name="name" class="nama" placeholder="Ketik nama...">
+                <input type="text" name="name" class="rayon" placeholder="Ketik rayon">
             </div>
             <div class="form-group">
                 <button type="button" class="turun"><span class="fa fa-chevron-circle-down"></span> Turun</button>
@@ -154,6 +163,13 @@
                   canv();
                });
                
+               $(".nama").on("keyup",function(){
+                  canv(); 
+               });
+               $(".rayon").on("keyup",function(){
+                  canv(); 
+               });
+               
                function canv()
                {
                    var canvas = document.getElementById("mycanvas");
@@ -168,6 +184,11 @@
                    var posX = parseInt($(".user").css("object-position"));
                    ctx.drawImage(img1,posX,usertop,userwidth,userheight);
                    ctx.drawImage(img2,0,0,700,700);
+                   ctx.font = "15px Calibri";
+                   ctx.fillStyle = "orange";
+                   ctx.fillText($(".nama").val(),canvas.width/2.4, 650);
+                   
+                   ctx.fillText("RAYON "+$(".rayon").val()+" - UNIVERSITAS JAMBI",canvas.width/3.1, 670);
                    var url = canvas.toDataURL("image/jpeg");
                    return url;
                }
