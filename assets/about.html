@@ -1,0 +1,111 @@
+<style>
+    .para
+    {
+        margin:0;
+        padding:0px;
+        line-height:15px;
+    }
+    
+    .lang
+    {
+        float:left;
+        box-sizing:border-box;
+        width:100%;
+        padding:5px;
+        margin-bottom:10px;
+    }
+    
+    .lang > h5
+    {
+        margin:0;
+        color:orange;
+    }
+    
+    .bar-wrap
+    {
+        border-radius:50px;
+        float:left;
+        box-sizing:border-box;
+        width:100%;
+        height:10px;
+        position:relative;
+        background-color:#aaa;
+        margin-top:2px;
+    }
+    
+    .bar-fill
+    {
+        border-radius:50px;
+        position:absolute;
+        top:0;
+        transition:ease-in-out 10s;
+        background-color:#111;
+        left:0;
+        height:100%;
+        width:0%;
+    }
+</style>
+<p class='para'>Welcome bros! My name is Alfian Chandra. I'm a student in Jambi University.
+I'm a Web Developer and Web Designer. I work part times between my recent projects and my college. It doesn't really disturb my activities at all.
+<br><br>Coding, is my very hobby. I enjoy doing things that I like. I always open for side jobs. You can always throw me 
+any Web Development or Web Design projects (Of course we will discuss necessary things).</p>
+<h4 style='color:#000;border-bottom:2px dotted #000;margin:0;padding:5px;float:left;box-sizing:border-box;width:100%;margin-top:10px;text-align:center;'>My Skill-o-Meter based on Language</h4>
+<div class='lang'>
+    <h5>HTML</h5>
+    <div class="bar-wrap">
+        <div class="bar-fill html-fill"></div>
+    </div>
+</div>
+<div class='lang'>
+    <h5>CSS</h5>
+    <div class="bar-wrap">
+        <div class="bar-fill css-fill"></div>
+    </div>
+</div>
+<div class='lang'>
+    <h5>JavaScript</h5>
+    <div class="bar-wrap">
+        <div class="bar-fill js-fill"></div>
+    </div>
+</div>
+<div class='lang'>
+    <h5>PHP</h5>
+    <div class="bar-wrap">
+        <div class="bar-fill php-fill"></div>
+    </div>
+</div>
+<div class='lang'>
+    <h5>MySQL</h5>
+    <div class="bar-wrap">
+        <div class="bar-fill sql-fill"></div>
+    </div>
+</div>
+<script>
+    setInterval(function(){
+        for(var html = 0;html <= 95;html++)
+        {
+            $(".html-fill").css("width",html+"%");
+        }
+        
+        for(var csss = 0;csss <= 90;csss++)
+        {
+            $(".css-fill").css("width",csss+"%");
+        }
+        
+        for(var js = 0;js <= 80;js++)
+        {
+            $(".js-fill").css("width",js+"%");
+        }
+        
+        for(var php = 0;php <= 75;php++)
+        {
+            $(".php-fill").css("width",php+"%");
+        }
+        
+        for(var sql = 0;sql <= 60;sql++)
+        {
+            $(".sql-fill").css("width",sql+"%");
+        }
+        
+    },2000);
+</script>
