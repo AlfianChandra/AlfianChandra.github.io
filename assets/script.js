@@ -5,7 +5,12 @@ $(document).ready(function(){
    var bio = $(".bio");
    
    home.click(function(){
-       $(".welcome").html("I hope you are enjoy the welcome!");
+    new TypeIt('.welcome', {
+      strings:["Welcome to my github page","I hope you enjoy the welcome..."],
+      speed: 100,
+      breakLines:false,
+      waitUntilVisible: true
+    }).go();
       //DisplayWrapper
       removeZindex();
       $(".big").removeClass("opacitor"); 
@@ -40,7 +45,6 @@ $(document).ready(function(){
    });
    
    info.click(function(){
-       $(".welcome").html("Viewing About me...");
       //Display Wrapper
       removeZindex();
       $(".info-wrap").fadeIn(1000); 
@@ -67,7 +71,6 @@ $(document).ready(function(){
    });
    
    bio.click(function(){
-       $(".welcome").html("Viewing My Contact...");
       //DisplayWrapper 
       removeZindex();
       $(".info-wrap").fadeOut(1000); 
