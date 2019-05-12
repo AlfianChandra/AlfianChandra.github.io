@@ -107,4 +107,6 @@ $(document).ready(function(){
        $(".big").removeClass(".z-index");
        $(".big2").removeClass(".z-index");
    }
+   
+
 });

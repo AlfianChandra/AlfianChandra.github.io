@@ -4,6 +4,7 @@
         margin:0;
         padding:0px;
         line-height:15px;
+        color:#000;
     }
     
     .lang
@@ -45,7 +46,7 @@
         width:0%;
     }
 </style>
-<p class='para'>Welcome bros! My name is Alfian Chandra. I'm a student in Jambi University.
+<p class='para'>Hello Amiga! My name is Alfian Chandra. I'm a student in Jambi University.
 I'm also a Web Developer and Web Designer. I work part times between my recent projects and my college. It doesn't really disturb my activities at all.
 Coding, is my very hobby. I enjoy doing things that I like. I always open for side jobs. You can always throw me 
 any Web Development or Web Design projects (Of course we will discuss necessary things).</p>
@@ -80,6 +81,14 @@ any Web Development or Web Design projects (Of course we will discuss necessary 
         <div class="bar-fill sql-fill"></div>
     </div>
 </div>
+<button type="button" class="close-btn" id="disAbout">Close</button>
+<script>
+  $(document).ready(function(){
+    $("#disAbout").click(function(){
+      $(".home").click();
+    });
+  });
+</script>
 <script>
     new TypeIt('.para', {
       speed: 50,
