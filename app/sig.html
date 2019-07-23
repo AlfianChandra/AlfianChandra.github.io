@@ -88,9 +88,9 @@
             </div>
             
             <div class="twibbon-result" style="z-index:99999;position:relative;">
-                <canvas id="mycanvas" style="background-color:#aaa;" width="3508" height="2232"></canvas>
+                <canvas id="mycanvas" style="background-color:#aaa;" width="3496" height="2472"></canvas>
             </div>
-            <div class="image" style="width:3508px;height:2232px">
+            <div class="image" style="width:3496px;height:2472px">
                 <img src="aset/sig.jpg" class="cert-ex" id="cert">
             </div>
         </div>
@@ -115,7 +115,7 @@
                {
                    var canvas = document.getElementById("mycanvas");
                    var url = canvas.toDataURL("image/jpeg");
-                   document.write('<img src="'+url+'" width="3508" height="2232"/>');
+                   document.write('<img src="'+url+'" width="3496" height="2472"/>');
                }
                
                function assignText(text)
@@ -124,10 +124,10 @@
                    var canvas = document.getElementById("mycanvas");
                    var context = canvas.getContext("2d");
                    context.fillText("",0,0);
-                   context.font = "80px Arial";
+                   context.font = "120px Calibri";
                    context.fillStyle = "rgb(0,150,255)";
                    context.textAlign = "center";
-                   context.fillText(text,1810,575);
+                   context.fillText(text,1795,820);
                }
                
                function loadImage()
@@ -135,7 +135,7 @@
                    var canvas = document.getElementById("mycanvas");
                    var context = canvas.getContext("2d");
                    var image = document.getElementById("cert");
-                   context.drawImage(image,0,0,3508,2232);
+                   context.drawImage(image,0,0,3496,2472);
                }
             });
         </script>
