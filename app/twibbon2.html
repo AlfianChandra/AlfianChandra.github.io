@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=2.0, user-scalable=0">
+        <title></title>
+        <link rel="stylesheet" href="aset/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="aset/font-awesome/css/font-awesome.min.css"/>
+        <script src="aset/jquery/jquery.min.js"></script>
+        <script src="aset/bootstrap/js/bootstrap.min.js"></script>
+        <style>
+            .twibbon-wrapper
+            {
+                float:left;
+                box-sizing:border-box;
+                width:700px;
+                position:relative;
+                height:700px;
+                border:2px dashed #333;
+                background-color:#eee;
+            }
+            
+            .twib
+            {
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+            
+            .user
+            {
+                position:absolute;
+                top:0;
+                left:0;
+                object-fit:contain;
+            }
+            
+            .twibbon-result
+            {
+                float:left;
+                box-sizing:border-box;
+                width:100%;
+            }
+            
+            button
+            {
+                padding:18px;
+                border:none;
+                background-color:rgb(0,150,255);
+                color:#fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="col-md-12">
+            <h2>Twibbon Maker by Alfian Chandra</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="file" id="inp"> <button style="margin-top:10px;" type="button" class="load"><span class="fa fa-upload"></span> Muat Gambar</button>
+            </div>
+            <div class="form-group">
+                <button type="button" class="turun"><span class="fa fa-chevron-circle-down"></span> Turun</button>
+                <button type="button" class="naik"><span class="fa fa-chevron-circle-up"></span> Naik</button>
+                
+                <button type="button" class="kiri"><span class="fa fa-chevron-circle-left"></span> Kiri</button>
+                <button type="button" class="kanan"><span class="fa fa-chevron-circle-right"></span> Kanan</button>
+                <button type="button" class="smalize"><span class="fa fa-search-minus"></span> Kecilkan</button>
+                <button type="button" class="bigger"><span class="fa fa-search-plus"></span> Besarkan</button>
+                <button type="button" class="simpan"><span class="fa fa-save"></span> Simpan</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h4>Hasil:</h4>
+            <div class="twibbon-result" style="z-index:99999;position:relative;">
+                <canvas id="mycanvas" width="700" height="700"></canvas>
+            </div>
+            
+            <h4>Contoh</h4>
+            <div class="twibbon-wrapper">
+                
+                <img src="" class="user" id="user" style="resize:both">
+                <img src="aset/twib.png" class="twib" id="twib">
+            </div>
+
+        </div>
+        
+        <script>
+            $(document).ready(function(){
+               $(".turun").click(function(){
+                  var top = $(".user").css("top");
+                  var intTop = parseInt(top);
+                  var plus = intTop+10;
+                  $(".user").css("top",plus+"px");
+                  canv();
+               });
+               
+               $(".naik").click(function(){
+                  var top = $(".user").css("top");
+                  var intTop = parseInt(top);
+                  var plus = intTop-10;
+                  $(".user").css("top",plus+"px");
+                  canv();
+               });
+               
+               $(".kiri").click(function(){
+                   var pos = $(".user").css("object-position");
+                   var toIn = parseInt(pos);
+                   var value = toIn-10;
+                   $(".user").css("object-position",value+"px");
+                   canv();
+               });
+               
+               $(".kanan").click(function(){
+                   var pos = $(".user").css("object-position");
+                   var toIn = parseInt(pos);
+                   var value = toIn+10;
+                   $(".user").css("object-position",value+"px");
+                   canv();
+               });
+               
+               $(".smalize").on("click",function(){
+                  var width = parseInt($(".user").css("width"));
+                  var smallize = width-20;
+                  $(".user").css("width",smallize+"px");
+                  canv();
+               });
+               $(".bigger").click(function(){
+                  var width = parseInt($(".user").css("width"));
+                  var smallize = width+20;
+                  $(".user").css("width",smallize+"px");
+                  canv();
+               });
+               
+               function readUrl(input)
+               {
+                   if(input.files && input.files[0])
+                   {
+                       var reader = new FileReader();
+                       reader.onload = function(e)
+                       {
+                           $(".user").attr("src",e.target.result);
+                       }
+                       
+                       reader.readAsDataURL(input.files[0]);
+                   }
+               }
+               
+               $("#inp").on("change",function(){
+                  readUrl(this); 
+                  canv();
+               });
+               
+               function canv()
+               {
+                   var canvas = document.getElementById("mycanvas");
+                   var ctx = canvas.getContext("2d");
+                   var img1 = document.getElementById("user");
+                   var img2 = document.getElementById("twib");
+                   
+                   var userwidth = parseInt($(".user").css("width"));
+                   var userheight = parseInt($(".user").css("height"));
+                   var usertop = parseInt($(".user").css("top"));
+                   
+                   var posX = parseInt($(".user").css("object-position"));
+                   ctx.drawImage(img1,posX,usertop,userwidth,userheight);
+                   ctx.drawImage(img2,0,0,700,700);
+                   var url = canvas.toDataURL("image/jpeg");
+                   return url;
+               }
+               
+               $(".simpan").click(function(){
+                   var url = canv();
+                   document.write('<img src="' + url + '" width="700" height="700"/>');
+               });
+               
+               $(".load").click(function(){
+                  canv(); 
+               });
+            });
+        </script>
+    </body>
+</html>
