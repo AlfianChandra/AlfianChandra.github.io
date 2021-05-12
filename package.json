@@ -23,6 +23,6 @@
     "page": "^1.11.6",
     "sirv-cli": "^1.0.0",
     "svelte-c-reveal": "^2.0.1",
-    "swiper": "^6.4.5"
+    "swiper": "^6.5.1"
   }
 }
